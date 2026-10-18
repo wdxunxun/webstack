@@ -53,6 +53,13 @@
     <meta name="twitter:title" content="WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、素材资源网站，定时更新分享优质产品设计书签。www.webstack.cc">
     <meta name="twitter:description" content="UI设计,UI设计素材,设计导航,网址导航,设计资源,创意导航,创意网站导航,设计师网址大全,设计素材大全,设计师导航,UI设计资源,优秀UI设计欣赏,设计师导航,设计师网址大全,设计师网址导航,产品经理网址导航,交互设计师网址导航,www.webstack.cc">
     <meta name="twitter:image" content="http://www.webstack.cc/assets/images/webstack_banner_cn.png">
+    <style>
+        .nav-mode-li + .nav-mode-li { margin-left: 0; }
+        .nav-mode-a { color: #7b8794 !important; }
+        .nav-mode-a:hover { color: #2f3b4c !important; }
+        .nav-mode-a.active { color: #3d8bfd !important; font-weight: 600; }
+        .nav-mode-li { padding: 0 6px; }
+    </style>
 </head>
 
 <body class="page-body">
@@ -150,6 +157,12 @@
                     </li>
                 </ul>
                 <ul class="user-info-menu right-links list-inline list-unstyled">
+                    <li class="nav-mode-li">
+                        <a href="#" class="nav-mode-a" data-mode="int" title="内网地址（局域网 IP + 端口）"><i class="fa-home"></i> 内网</a>
+                    </li>
+                    <li class="nav-mode-li">
+                        <a href="#" class="nav-mode-a active" data-mode="ext" title="外网地址（域名，走 frp 隧道）"><i class="fa-globe"></i> 外网</a>
+                    </li>
                     <li class="hidden-sm hidden-xs">
                         <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank">
                             <i class="fa-github"></i>  GitHub
@@ -165,7 +178,7 @@
 
 
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('http://10.10.1.24/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="http://10.10.1.24/">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('http://10.10.1.24/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="http://10.10.1.24/" data-url-int="http://10.10.1.24/" data-url-ext="https://5ddd.com/fnosforwdxunxun/">
                         <div class="xe-comment-entry">
                             <a class="xe-user-img">
                                 <img data-src="../assets/images/logos/icon-fnos.png" class="lozad img-circle" width="40">
@@ -174,22 +187,7 @@
                                 <a href="#" class="xe-user-name overflowClip_1">
                                     <strong>fnosforxun</strong>
                                 </a>
-                                <p class="overflowClip_3">影音视频下载平台</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://5ddd.com/fnosforwdxunxun/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://5ddd.com/fnosforwdxunxun/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="../assets/images/logos/icon-fnos.png" class="lozad img-circle" width="40">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>fnosforxun</strong>
-                                </a>
-                                <p class="overflowClip_3">影音视频下载平台(外链）</p>
+                                <p class="overflowClip_3">影音视频下载平台，自动切换内外网。</p>
                             </div>
                         </div>
                     </div>
@@ -271,7 +269,7 @@
                 </div>
                 
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('http://10.10.1.24:8085/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="http://10.10.1.24:8085/">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('http://10.10.1.24:8085/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="http://10.10.1.24:8085/" data-url-int="http://10.10.1.24:8085/" data-url-ext="https://qb.wdxunxun.top/">
                         <div class="xe-comment-entry">
                             <a class="xe-user-img">
                                 <img data-src="../assets/images/logos/icon-qbittorrent.ico" class="lozad img-circle" width="40">
@@ -280,28 +278,13 @@
                                 <a href="#" class="xe-user-name overflowClip_1">
                                     <strong>qBittorrent</strong>
                                 </a>
-                                <p class="overflowClip_3">qBittorrent</p>
+                                <p class="overflowClip_3">BT 下载器，自动切换内外网。</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://qb.wdxunxun.top/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://qb.wdxunxun.top/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="../assets/images/logos/icon-qbittorrent.ico" class="lozad img-circle" width="40">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>qBittorrent（外网）</strong>
-                                </a>
-                                <p class="overflowClip_3">BT 下载器，外网访问入口（frp 隧道）。</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://transmission.wdxunxun.top/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://transmission.wdxunxun.top/">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://transmission.wdxunxun.top/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://transmission.wdxunxun.top/" data-url-int="http://10.10.1.24:9091/" data-url-ext="https://transmission.wdxunxun.top/">
                         <div class="xe-comment-entry">
                             <a class="xe-user-img">
                                 <img data-src="../assets/images/logos/icon-transmission.png" class="lozad img-circle" width="40">
@@ -310,7 +293,7 @@
                                 <a href="#" class="xe-user-name overflowClip_1">
                                     <strong>Transmission</strong>
                                 </a>
-                                <p class="overflowClip_3">BT/PT 下载器，外网访问入口（frp 隧道）。</p>
+                                <p class="overflowClip_3">BT/PT 下载器，自动切换内外网。</p>
                             </div>
                         </div>
                     </div>
@@ -495,7 +478,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://uptime.wdxunxun.top/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://uptime.wdxunxun.top/">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://uptime.wdxunxun.top/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://uptime.wdxunxun.top/" data-url-int="http://10.10.1.24:3031/" data-url-ext="https://uptime.wdxunxun.top/">
                         <div class="xe-comment-entry">
                             <a class="xe-user-img">
                                 <img data-src="../assets/images/logos/icon-uptime-kuma.png" class="lozad img-circle" width="40">
@@ -504,7 +487,7 @@
                                 <a href="#" class="xe-user-name overflowClip_1">
                                     <strong>Uptime Kuma</strong>
                                 </a>
-                                <p class="overflowClip_3">服务可用性监控，外网入口（frp 隧道）。</p>
+                                <p class="overflowClip_3">服务可用性监控，自动切换内外网。</p>
                             </div>
                         </div>
                     </div>
@@ -607,6 +590,44 @@
     <!-- JavaScripts initializations and stuff -->
     <script src="../assets/js/xenon-custom.js"></script>
     <script src="../assets/js/lozad.js"></script>
+
+    <!-- 内网/外网地址切换 -->
+    <script>
+    (function () {
+        var KEY = 'webstack.netmode';
+        var PRIVATE = /^(10\.|192\.168\.|172\.(1[6-9]|2[0-9]|3[01])\.|127\.|localhost$|.*\.local$)/;
+        var qs = new URLSearchParams(location.search);
+        var mode = qs.get('mode');
+        if (mode !== 'int' && mode !== 'ext') { try { mode = localStorage.getItem(KEY); } catch (e) {} }
+        if (mode !== 'int' && mode !== 'ext') { mode = PRIVATE.test(location.hostname) ? 'int' : 'ext'; }
+
+        function apply(m) {
+            document.querySelectorAll('.nav-mode-a').forEach(function (a) {
+                a.classList.toggle('active', a.dataset.mode === m);
+            });
+            document.querySelectorAll('[data-url-int],[data-url-ext]').forEach(function (el) {
+                var u = m === 'int' ? (el.dataset.urlInt || el.dataset.urlExt)
+                                    : (el.dataset.urlExt || el.dataset.urlInt);
+                if (!u) return;
+                el.setAttribute('data-original-title', u);
+                el.onclick = function (e) {
+                    if (e) e.preventDefault();
+                    window.open(u, '_blank');
+                    return false;
+                };
+            });
+        }
+        apply(mode);
+        document.querySelectorAll('.nav-mode-a').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                e.preventDefault();
+                var m = a.dataset.mode;
+                try { localStorage.setItem(KEY, m); } catch (err) {}
+                apply(m);
+            });
+        });
+    })();
+    </script>
 </body>
 
 </html>
