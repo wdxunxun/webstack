@@ -1,10 +1,12 @@
 // Cloudflare Pages Function: 全站 HTTP Basic 密码保护
-// 优先使用环境变量 NAV_PASSWORD（在 Cloudflare 面板设置，不会进入仓库）；
+// 用户名固定为 wdxunxun（可用环境变量 NAV_USERNAME 覆盖）；
+// 密码优先使用环境变量 NAV_PASSWORD（在 Cloudflare 面板设置，不会进入仓库）；
 // 未设置时回退到内置哈希，仅作"防顺手点进来"的弱保护。
 //
 // 设置真密码：Cloudflare 面板 → Pages → 本项目 → Settings → Environment variables
 //            新增 NAV_PASSWORD（加密变量），然后重新部署一次。
 
+const DEFAULT_USERNAME = "wdxunxun";
 const FALLBACK_SHA256 = "36b0579be6ce0528cba609ec39bc78eae29c483cf78280666fc4d3584f107079"; // sha256("301111")
 
 function toHex(buf) {
@@ -50,8 +52,11 @@ export async function onRequest(context) {
   }
   const sep = decoded.indexOf(":");
   if (sep < 0) return unauthorized();
+  const username = decoded.slice(0, sep);
   const password = decoded.slice(sep + 1);
 
+  const expectedUser = (env && env.NAV_USERNAME) || DEFAULT_USERNAME;
+  if (!safeEqual(username, expectedUser)) return unauthorized();
   if (!(await passwordMatches(password, env))) return unauthorized();
 
   const response = await next();
